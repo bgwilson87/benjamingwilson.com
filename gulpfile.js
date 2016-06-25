@@ -66,6 +66,12 @@ gulp.task('styles', function() {
         .pipe(gulp.dest('app/assets/'));
 });
 
+gulp.task('fonts', function() {
+    return gulp.src([
+                    'node_modules/font-awesome/fonts/fontawesome-webfont.*'])
+            .pipe(gulp.dest('app/assets/fonts/'));
+});
+
 gulp.task('watch', function() {
   gulp.watch('app/styles/**/*.scss', ['styles']);
   gulp.watch('app/scripts/**/*.js', ['scripts']);
@@ -80,5 +86,5 @@ gulp.task('connect', function() {
 });
 
 gulp.task('default', ['watch', 'connect'], function() {
-  gulp.start('styles', 'scripts');
+  gulp.start('styles', 'scripts', 'fonts');
 });

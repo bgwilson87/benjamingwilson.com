@@ -1,0 +1,14 @@
+$fa-font-path: "../../assets/fonts";
+@import "../../node_modules/font-awesome/scss/font-awesome.scss";
+
+
+/*
+ * prevent ad blockers from blocking social icons by prefixing with bw-
+ */
+
+.bw-fa-github-square:before {
+  content: "\f092";
+}
+.bw-fa-linkedin-square:before {
+  content: "\f08c";
+}
