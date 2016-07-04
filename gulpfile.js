@@ -12,6 +12,7 @@ var replace = require('gulp-replace');
 var scriptsfiles = [
   'node_modules/jquery/dist/jquery.min.js',
   'node_modules/angular/angular.min.js',
+  'node_modules/angular-route/angular-route.min.js',
   'node_modules/angular-sanitize/angular-sanitize.min.js',
   'node_modules/angular-bootstrap/ui-bootstrap-tpls.min.js',  
   'node_modules/lodash/dist/lodash.min.js',
