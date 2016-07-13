@@ -1,0 +1,37 @@
+<div>
+  <ui-gmap-google-map center="map.center"
+                      zoom="map.zoom"
+                      options="map.options">
+
+    <ui-gmap-marker idKey="$index"
+                    coords="marker.coords"
+                    options="marker.options"
+                    events="markerEvents"
+                    ng-repeat="marker in markers">
+
+      <ui-gmap-window show="marker.hover"
+                      options="infowindowOptions">
+        
+        <div>
+          <h5>{{marker.gallery.title}}</h5>
+          <p>
+            {{marker.gallery.shortDescription}}</p>
+            <i class="fa fa-camera"></i> &nbsp;{{marker.gallery.numPhotos}} photo<span ng-show="{{marker.gallery.numPhotos}} > 1">s</span>
+          <p>
+        </div>
+
+      </ui-gmap-window>
+
+    </ui-gmap-marker>
+
+  	<ui-gmap-polyline path="path"
+		                  stroke="pathStroke"
+		                  geodesic="true"
+		                  ng-repeat="path in paths">
+		</ui-gmap-polyline>
+
+
+
+  </ui-gmap-google-map>
+
+</div>

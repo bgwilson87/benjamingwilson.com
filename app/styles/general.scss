@@ -3,9 +3,9 @@ Nav
 ************************************************************************************/
 
 #main-nav {
-  .navbar-right {
+  .navbar-text {
     a {
-      &:hover {
+      &:hover, &:focus {
         text-decoration: none;
       }
     }
@@ -15,5 +15,38 @@ Nav
         color: #333; 
       }
     }
+  }
+}
+
+@media (max-width:768px) {
+  #main-nav {
+    .navbar-header {
+      float: left;
+
+      .navbar-brand {
+        padding-left: 0px;
+      }
+    }
+  }
+}
+
+
+/***********************************************************************************
+Angular Google Maps
+************************************************************************************/
+
+.angular-google-map-container { height: 1000px; }
+
+
+/***********************************************************************************
+Angular UI Bootstrap Overrides
+************************************************************************************/
+
+.carousel-control {
+  background-image: none !important;
+
+  .fa {
+    position: absolute;
+    top: 50%;
   }
 }
