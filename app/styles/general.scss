@@ -15,7 +15,12 @@ Nav
 
 #main-nav {
   max-height: 59px;
-  overflow: hidden;
+
+  .dropdown {
+    .dropdown-menu {
+      margin: 0;
+    }
+  }
 
   .navbar-text {
     a {
@@ -66,7 +71,7 @@ Angular Google Maps
 
 
 /***********************************************************************************
-Angular UI Bootstrap Overrides
+Bootstrap Overrides
 ************************************************************************************/
 
 .carousel-control {
@@ -76,4 +81,8 @@ Angular UI Bootstrap Overrides
     position: absolute;
     top: 50%;
   }
+}
+
+.modal-dialog {
+  margin-top: 110px;
 }
