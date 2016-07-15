@@ -14,7 +14,7 @@ angular.module('app')
     };
 
     uiGmapGoogleMapApi.then(function(maps) {
-      setInitialMapType(maps.MapTypeId.SATELLITE);
+      setInitialMapType(maps.MapTypeId.HYBRID);
     });
 
     $scope.map = {

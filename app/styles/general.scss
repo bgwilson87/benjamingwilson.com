@@ -1,3 +1,6 @@
+$navbar-height: 70px;
+
+
 /***********************************************************************************
 Html
 ************************************************************************************/
@@ -10,15 +13,41 @@ html, body {
 
 
 /***********************************************************************************
+Custom
+************************************************************************************/
+
+.overlay-panel {
+  display: inline-block;
+  padding: 20px;
+  background: rgb(0, 0, 0);
+  background: rgba(0, 0, 0, 0.35);
+}
+
+
+/***********************************************************************************
 Nav
 ************************************************************************************/
 
 #main-nav {
-  max-height: 59px;
+  height: $navbar-height;
+  padding: 5px 0;
 
   .dropdown {
+    margin-top: 20px;
+
     .dropdown-menu {
       margin: 0;
+    }
+  }
+
+  .navbar-brand {
+    margin: 15px 15px 0 0;
+    width: 200px;
+    height: 33px;
+    background: url('/assets/images/logo.gif');
+
+    &:hover {
+      background-position: 0 33px;
     }
   }
 
@@ -51,6 +80,30 @@ Nav
 
 
 /***********************************************************************************
+Jumbotrons
+************************************************************************************/
+
+#page-index {
+  .jumbotron {
+    background: #FFFFFF no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    min-height: 400px;
+    color: #fff;
+
+    p {
+      margin: 20px 0;
+    }
+  }
+
+  #jumbotron-bwca {
+    background-image: url('/assets/images/bwca-jumbotron.jpg');
+  } 
+}
+
+/***********************************************************************************
 Angular Google Maps
 ************************************************************************************/
 
@@ -63,7 +116,7 @@ Angular Google Maps
 
 .angular-google-map-container {
   position: absolute;
-  top: 59px;
+  top: $navbar-height;
   bottom: 0;
   right: 0;
   left: 0;

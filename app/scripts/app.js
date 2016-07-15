@@ -12,6 +12,10 @@ angular.module('app').config(['$routeProvider', '$locationProvider', 'uiGmapGoog
     .when('/bwca', {
       templateUrl: 'templates/bwca/index.html',
       controller: 'BwcaController'
+    })
+    .otherwise({
+      redirectTo: '/',
+      templateUrl: 'templates/home/index.html'
     });
 
   $locationProvider.hashPrefix('!');
