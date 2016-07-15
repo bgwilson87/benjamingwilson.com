@@ -18,7 +18,7 @@ angular.module('app').config(['$routeProvider', '$locationProvider', 'uiGmapGoog
       templateUrl: 'templates/home/index.html'
     });
 
-  $locationProvider.hashPrefix('!');
+  $locationProvider.html5Mode(true);
 
   uiGmapGoogleMapApiProvider.configure({
     key: 'AIzaSyCHNesumVjuC3iFWxwWkWS1v3gwu3mZrYE'
