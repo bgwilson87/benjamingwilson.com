@@ -1,5 +1,5 @@
 angular.module('app')
-  .controller('BwcaController', ['$scope', 'uiGmapGoogleMapApi', '$uibModal', function($scope, uiGmapGoogleMapApi, $uibModal) {
+  .controller('BwcaController', ['$scope', 'uiGmapGoogleMapApi', '$uibModal', '$analytics', function($scope, uiGmapGoogleMapApi, $uibModal, $analytics) {
 
     var openWelcomeModal = function() {
       $uibModal.open({
@@ -44,9 +44,16 @@ angular.module('app')
       });
     };
 
+    var trackIconEvent = function(index, event) {
+      $analytics.eventTrack(event, {
+        category: 'bwca icon', label: index
+      });
+    };
+
     $scope.markerEvents = {
       mouseover: function (marker, e) {
         setMarkerHover(marker.key, true);
+        trackIconEvent(marker.key, 'hover');        
       },
       mouseout: function (marker, e) {
         setMarkerHover(marker.key, false);
@@ -54,6 +61,7 @@ angular.module('app')
       click: function(marker, e) {
         openGalleryModal(marker.key);
         setMarkerHover(marker.key, false);
+        trackIconEvent(marker.key, 'click'); 
       }
     };
 
