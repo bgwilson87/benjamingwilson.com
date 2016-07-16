@@ -12,15 +12,18 @@ angular.module('app').config(['$routeProvider', '$locationProvider', '$analytics
 
   $routeProvider
     .when('/', {
-      templateUrl: 'templates/home/index.html'
+      templateUrl: 'templates/home/index.html',
+      title: 'benjaminGwilson',
+      metaDescription: 'Benjamin G. Wilson is a web developer working in the NYC area'
     })
     .when('/bwca', {
       templateUrl: 'templates/bwca/index.html',
-      controller: 'BwcaController'
+      controller: 'BwcaController',
+      title: 'Geo Photo Galleries - benjaminGwilson',
+      metaDescription: 'A project using AngularJS, Angular Google Maps and Angular Bootstrap.'
     })
     .otherwise({
-      redirectTo: '/',
-      templateUrl: 'templates/home/index.html'
+      redirectTo: '/'
     });
 
   $locationProvider.html5Mode(true);
@@ -31,4 +34,13 @@ angular.module('app').config(['$routeProvider', '$locationProvider', '$analytics
   uiGmapGoogleMapApiProvider.configure({
     key: 'AIzaSyCHNesumVjuC3iFWxwWkWS1v3gwu3mZrYE'
   });
+}]);
+
+angular.module('app').run(['$rootScope', '$route', function($rootScope, $route) {
+
+  $rootScope.$on('$routeChangeSuccess', function(event, current, previous) {
+    $rootScope.pageTitle = $route.current.title;
+    $rootScope.metaDescription = $route.current.metaDescription;
+  });
+
 }]);
