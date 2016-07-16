@@ -78,6 +78,15 @@ Nav
   }
 }
 
+@media (max-width: 480px) {
+  #main-nav {
+    .dropdown-menu {
+      right: 0;
+      left: auto;
+    }
+  }
+}
+
 
 /***********************************************************************************
 Jumbotrons
