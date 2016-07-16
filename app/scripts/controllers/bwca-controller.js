@@ -53,6 +53,7 @@ angular.module('app')
       },
       click: function(marker, e) {
         openGalleryModal(marker.key);
+        setMarkerHover(marker.key, false);
       }
     };
 
