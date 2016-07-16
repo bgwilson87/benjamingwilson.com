@@ -18,6 +18,8 @@ var scriptsfiles = [
   'node_modules/lodash/lodash.min.js',
   'node_modules/angular-simple-logger/dist/angular-simple-logger.min.js',
   'node_modules/angular-google-maps/dist/angular-google-maps.min.js',
+  'node_modules/angulartics/dist/angulartics.min.js',
+  'node_modules/angulartics-google-analytics/dist/angulartics-ga.min.js',
   'app/scripts/app.js',
   'app/scripts/**/*.js'
 ];
