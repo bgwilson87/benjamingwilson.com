@@ -32,7 +32,7 @@ angular.module('app').config(['$routeProvider', '$locationProvider', '$analytics
   $analyticsProvider.withBase(true);
 
   uiGmapGoogleMapApiProvider.configure({
-    key: 'AIzaSyCHNesumVjuC3iFWxwWkWS1v3gwu3mZrYE'
+    key: '@@googleMapsApiBrowserKey'
   });
 }]);
 

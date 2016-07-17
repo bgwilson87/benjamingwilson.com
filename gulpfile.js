@@ -8,6 +8,7 @@ var cleanCss = require('gulp-clean-css');
 var mergeStream = require('merge-stream');
 var connect = require('gulp-connect');
 var replace = require('gulp-replace');
+var appKeys = require('./app-keys.json');
 
 var scriptsfiles = [
   'node_modules/jquery/dist/jquery.min.js',
@@ -49,6 +50,7 @@ gulp.task('scripts', ['html'], function() {
 
   return gulp.src(scriptsfiles)
     .pipe(concat('main.js'))
+    .pipe(replace(/@@googleMapsApiBrowserKey/, appKeys["google_maps_api_browser_key"]))
     // .pipe(uglify())
     .pipe(gulp.dest('app/assets'));
 });

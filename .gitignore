@@ -3,3 +3,5 @@
 /app/assets/main.js
 app/index.html
 .htaccess
+
+app-keys.json
