@@ -5,12 +5,9 @@ angular.module('app')
   	$scope.slides = [];
 
   	var setSlides = function() {
-  	  var num = 1;
-
-  	  while(num <= $scope.gallery.numPhotos) {
-  	  	$scope.slides.push('/assets/images/' + $scope.gallery.name + '/' + num + '.jpg');
-  	  	num++;
-  	  }
+      for(i = 1; i <= $scope.gallery.numPhotos; i++) {
+        $scope.slides.push('/assets/images/' + $scope.gallery.name + '/' + i + '.jpg');
+      }
   	};
 
   	$scope.close = function() {
