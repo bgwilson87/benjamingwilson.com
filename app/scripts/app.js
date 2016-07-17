@@ -22,6 +22,12 @@ angular.module('app').config(['$routeProvider', '$locationProvider', '$analytics
       title: 'Geo Photo Galleries - benjaminGwilson',
       metaDescription: 'A project using AngularJS, Angular Google Maps and Angular Bootstrap.'
     })
+    .when('/d3-fantasy-football', {
+      templateUrl: 'templates/d3-fantasy-football/index.html',
+      controller: 'D3FantasyFootballController',
+      title: 'd3 + Fantasy Football - benjaminGwilson',
+      metaDescription: 'A project using AngularJS and d3.'
+    })
     .otherwise({
       redirectTo: '/'
     });
