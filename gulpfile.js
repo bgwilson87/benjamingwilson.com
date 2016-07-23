@@ -86,7 +86,8 @@ gulp.task('watch', function() {
 gulp.task('connect', function() {
   connect.server({
     root: 'app',
-    livereload: true
+    livereload: true,
+    fallback: 'app/templates/index.html'
   });
 });
 
